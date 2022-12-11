@@ -6,11 +6,14 @@ st.set_page_config(page_title="AI対話システム", layout="wide")
 st.title("ChatGPT（AI対話システム）")
 st.caption("Created by Daiki Ito")
 
-st.write('初めての方は右のリンクから「Sign up」をしてAPIキーを取得してください', 'https://beta.openai.com'
-                                                         '/account/api-keys')
+st.write('初めての方は右のリンクから「Sign up」をしてAPIキーを取得してください',
+         'https://beta.openai.com'
+         '/account/api-keys')
 # マニュアル
-if st.checkbox('マニュアルの表示'):
-    st.write('easy_chatgpt_openai登録手順.pdf')
+st.write('マニュアルは下記リンクをクリック')
+st.write('https://oitauniv-my.sharepoint.com/:b:/g/personal'
+         '/dddd_sailing470_oitauniv_onmicrosoft_com/EewMDMq5DF1IjGn5Exe'
+         '-0eMBJrDfC1TVEJ3gUtN-Awy-zQ?e=X2onjf')
 
 # 質問フォーム
 with st.form(key='input_form'):
