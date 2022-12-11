@@ -1,14 +1,10 @@
-# browser_ttest
+# easy_chatgpt
 
-ブラウザ上でt検定→表→解釈まで出力できるウェブアプリです。
+ブラウザ上で自然言語処理を使った対話システムを体験できるウェブアプリです。
 
-https://dddd-onigiri-browser-ttest-main-468zyy.streamlitapp.com/
+https://dddd-onigiri-easy-chatgpt-main-iec0xc.streamlit.app/
 
-Excel形式のデータをアップすることで簡単に検定が行えます。
-
-GIGAスクールで一人一台端末が配備される中
-
-タブレットでも分析ができたらいいなと思い、作りました。
+ジェネレーティブAIに触れる機会が増えればいいなと思い、作りました。
 
 
 開発環境
@@ -18,12 +14,10 @@ GIGAスクールで一人一台端末が配備される中
 使用ライブラリ
 
     streamlit
-    numpy
-    pandas
-    scipy
+    openai
 
 ご意見・ご要望は↓
-https://forms.gle/G5sMYm7dNpz2FQtU9
+https://forms.gle/ADcoMh1zQUnoZVub7
 まで
 
 開発者　Daiki Ito（高校　情報科教員）
