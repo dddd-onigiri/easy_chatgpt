@@ -5,6 +5,9 @@ st.set_page_config(page_title="AI対話システム", layout="wide")
 
 st.title("ChatGPT（AI対話システム）")
 st.caption("Created by Daiki Ito")
+
+st.write('右のリンクから初めての方は「Sign up」をしてAPIキーを取得してください', 'https://beta.openai.com'
+                                                         '/account/api-keys')
 st.write("こんにちは！何でも聞いてください（あくまで参考にね）")
 
 # 質問フォーム
