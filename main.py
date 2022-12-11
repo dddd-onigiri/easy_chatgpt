@@ -7,6 +7,7 @@ st.title("ChatGPT（AI対話システム）")
 st.caption("Created by Daiki Ito")
 st.write("こんにちは！何でも聞いてください（あくまで参考にね）")
 
+#質問フォーム
 with st.form(key='input_form'):
     input_text = st.text_input("質問を入力してください")
     submitted = st.form_submit_button('質問する')
