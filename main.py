@@ -10,14 +10,15 @@ st.caption("Created by Daiki Ito")
 st.write('初めての方は右のリンクから「Sign up」をしてAPIキーを取得してください',
          'https://beta.openai.com'
          '/account/api-keys')
-# マニュアル
 
-image = Image.open('easy_chatgpt_openai登録手順（割付）-1.png')
-st.image(image)
-image = Image.open('easy_chatgpt_openai登録手順（割付）-2.png')
-st.image(image)
-image = Image.open('easy_chatgpt_openai登録手順（割付）-3.png')
-st.image(image)
+# マニュアル
+if st.checkbox('マニュアルの表示):
+    image = Image.open('easy_chatgpt_openai登録手順（割付）-1.png')
+    st.image(image)
+    image = Image.open('easy_chatgpt_openai登録手順（割付）-2.png')
+    st.image(image)
+    image = Image.open('easy_chatgpt_openai登録手順（割付）-3.png')
+    st.image(image)
 
 # 質問フォーム
 with st.form(key='input_form'):
