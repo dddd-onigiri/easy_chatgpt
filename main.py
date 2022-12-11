@@ -1,5 +1,6 @@
 import openai
 import streamlit as st
+st.set_page_config(page_title="AI対話システム", layout="wide")
 
 openai.api_key = "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"
 
