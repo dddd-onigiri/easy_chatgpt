@@ -10,10 +10,11 @@ st.write('初めての方は右のリンクから「Sign up」をしてAPIキー
          'https://beta.openai.com'
          '/account/api-keys')
 # マニュアル
+
 st.write('マニュアルは下記リンクをクリック')
 st.write('https://oitauniv-my.sharepoint.com/:b:/g/personal'
          '/dddd_sailing470_oitauniv_onmicrosoft_com/EewMDMq5DF1IjGn5Exe'
-         '-0eMBJrDfC1TVEJ3gUtN-Awy-zQ?e=X2onjf')
+         '-0eMBJrDfC1TVEJ3gUtN-Awy-zQ?e=iMOw59')
 
 # 質問フォーム
 with st.form(key='input_form'):
