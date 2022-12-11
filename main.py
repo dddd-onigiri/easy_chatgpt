@@ -6,13 +6,16 @@ st.set_page_config(page_title="AI対話システム", layout="wide")
 st.title("ChatGPT（AI対話システム）")
 st.caption("Created by Daiki Ito")
 
-st.write('右のリンクから初めての方は「Sign up」をしてAPIキーを取得してください', 'https://beta.openai.com'
+st.write('初めての方は右のリンクから「Sign up」をしてAPIキーを取得してください', 'https://beta.openai.com'
                                                          '/account/api-keys')
-st.write("こんにちは！何でも聞いてください（あくまで参考にね）")
+# マニュアル
+if st.checkbox('マニュアルの表示'):
+    st.write('easy_chatgpt_openai登録手順.pdf')
 
 # 質問フォーム
 with st.form(key='input_form'):
-    input_apikey = st.text_input("APIキーを取得してください")
+    st.write("こんにちは！何でも聞いてください（あくまで参考にね）")
+    input_apikey = st.text_input("取得したAPIキーを貼り付けてください")
     input_text = st.text_input("質問を入力してください")
     submitted = st.form_submit_button('質問する')
 
