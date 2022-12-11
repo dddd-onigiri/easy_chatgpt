@@ -1,5 +1,6 @@
 import openai
 import streamlit as st
+from PIL import Image
 
 st.set_page_config(page_title="AI対話システム", layout="wide")
 
@@ -11,10 +12,12 @@ st.write('初めての方は右のリンクから「Sign up」をしてAPIキー
          '/account/api-keys')
 # マニュアル
 
-st.write('マニュアルは下記リンクをクリック')
-st.write('https://oitauniv-my.sharepoint.com/:b:/g/personal'
-         '/dddd_sailing470_oitauniv_onmicrosoft_com/EewMDMq5DF1IjGn5Exe'
-         '-0eMBJrDfC1TVEJ3gUtN-Awy-zQ?e=iMOw59')
+image = Image.open('easy_chatgpt_openai登録手順（割付）-1.png')
+st.image(image)
+image = Image.open('easy_chatgpt_openai登録手順（割付）-2.png')
+st.image(image)
+image = Image.open('easy_chatgpt_openai登録手順（割付）-3.png')
+st.image(image)
 
 # 質問フォーム
 with st.form(key='input_form'):
