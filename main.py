@@ -2,9 +2,9 @@ import openai
 import streamlit as st
 from PIL import Image
 
-st.set_page_config(page_title="AI対話システム", layout="wide")
+st.set_page_config(page_title="AI自然言語処理", layout="wide")
 
-st.title("ChatGPT（AI対話システム）")
+st.title("ChatGPT（AI自然言語処理システム）")
 st.caption("Created by Daiki Ito")
 
 st.write('初めての方は右のリンクから「Sign up」をしてAPIキーを取得してください',
