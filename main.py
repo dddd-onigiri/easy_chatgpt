@@ -33,7 +33,7 @@ if submitted:
         response = openai.Completion.create(
             engine="text-davinci-003",
             prompt=input_text,
-            temperature=0.5,
+            temperature=0.9,
             max_tokens=1024,
             top_p=1.0,
             frequency_penalty=0,
