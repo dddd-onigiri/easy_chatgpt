@@ -43,4 +43,4 @@ if submitted:
     st.write("返答:", response['choices'][0]['text'])
 
 st.write('ご意見・ご要望は→', 'https://forms.gle/ADcoMh1zQUnoZVub7', 'まで')
-st.write('© 2022 Daiki Ito. All Rights Reserved.')
+st.write('© 2022-2023 Daiki Ito. All Rights Reserved.')
