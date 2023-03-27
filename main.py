@@ -34,7 +34,7 @@ if submitted:
         openai.api_key = input_apikey
         response = openai.Completion.create(
             engine="text-davinci-003",
-            prompt=+input_text,
+            prompt=input_text,
             temperature=1.0,
             max_tokens=1024,
             top_p=1.0,
