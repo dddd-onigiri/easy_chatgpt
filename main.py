@@ -32,7 +32,7 @@ with st.form(key='input_form'):
 if submitted:
     with st.spinner("考え中…"):
         st.write(input_prompt+input_text)
-        openai.api_key = input_prompt+"「"+input_apikey+"」"
+        openai.api_key = input_prompt+input_apikey
         response = openai.Completion.create(
             engine="text-davinci-003",
             prompt=input_text,
