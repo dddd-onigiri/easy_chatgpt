@@ -24,7 +24,7 @@ if st.checkbox('マニュアルの表示（クリックするとマニュアル�
 with st.form(key='input_form'):
     st.write("こんにちは！何でも聞いてください（あくまで参考にね）")
     input_prompt ='''あなたは研究アシスタントです。ユーザは高校生で、あなたに研究に関する質問を投げかけます。
-    アシスタントとして、論文執筆や研究の遂行に役立つ回答を、できる限り根拠を示した上で以下の質問に返してください。"""'''
+    アシスタントとして、論文執筆や研究の遂行に役立つ回答を、できる限り根拠を示した上で以下の「」内の質問に返してください。'''
     input_apikey = st.text_input("取得したAPIキーを貼り付けてください")
     input_text = st.text_area("質問を入力してください")
     submitted = st.form_submit_button('質問する')
@@ -32,7 +32,7 @@ with st.form(key='input_form'):
 if submitted:
     with st.spinner("考え中…"):
         st.write(input_prompt+input_text)
-        openai.api_key = input_apikey
+        openai.api_key = input_prompt+"「"+input_apikey+"」"
         response = openai.Completion.create(
             engine="text-davinci-003",
             prompt=input_text,
