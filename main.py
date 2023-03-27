@@ -31,6 +31,7 @@ if submitted:
     with st.spinner("考え中…"):
         openai.api_key = input_apikey
         response = openai.Completion.create(
+            #テスト
             engine="text-davinci-003",
             prompt=input_text,
             temperature=1.0,
