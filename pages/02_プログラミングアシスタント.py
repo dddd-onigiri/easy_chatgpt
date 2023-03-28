@@ -4,7 +4,7 @@ from PIL import Image
 
 st.set_page_config(page_title="プログラミングアシスタントAI", layout="wide")
 
-st.title("探究サポートAI")
+st.title("プログラミングサポートAI")
 st.caption("Created by Daiki Ito")
 
 st.write('初めての方は右のリンクから「Sign up」をしてAPIキーを取得してください',
