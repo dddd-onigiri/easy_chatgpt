@@ -25,7 +25,7 @@ with st.form(key='input_form'):
     st.write("こんにちは！悩みを相談してください。")
     st.write("質問は具体的なほうが的確にアドバイスをくれます。")
     input_prompt = '''役割：あなたはメンタルサポートアシスタントです。ユーザは高校生で、あなたに様々な悩みや相談を投げかけます。以下の######内の質問に返してください。
-    条件：メンタルサポーターとして、ユーザーに寄り添いながら、可能であれば解決策を提案してください。
+    条件：メンタルサポーターとして、ユーザーに寄り添いながら、可能であれば根拠をもとに解決策を提案してください。
     回答は長めに書いてください。また、優しさを忘れないでください。'''
     input_apikey = st.text_input("取得したAPIキーを貼り付けてください")
     input_text = st.text_area("質問を入力してください")
@@ -38,7 +38,7 @@ if submitted:
             # テスト
             engine="text-davinci-003",
             prompt=input_prompt+"###"+input_text+"###",
-            temperature=0.2,
+            temperature=0.5,
             max_tokens=2048,
             top_p=1.0,
             frequency_penalty=0,
