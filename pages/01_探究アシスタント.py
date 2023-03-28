@@ -2,7 +2,7 @@ import openai
 import streamlit as st
 from PIL import Image
 
-st.set_page_config(page_title="探究サポートAI", layout="wide")
+st.set_page_config(page_title="プログラミングサポートAI", layout="wide")
 
 st.title("探究サポートAI")
 st.caption("Created by Daiki Ito")
