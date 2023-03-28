@@ -2,9 +2,9 @@ import openai
 import streamlit as st
 from PIL import Image
 
-st.set_page_config(page_title="AI自然言語処理", layout="wide")
+st.set_page_config(page_title="Any ChatGPT", layout="wide")
 
-st.title("ChatGPT（AI自然言語処理システム）")
+st.title("総合AI")
 st.caption("Created by Daiki Ito")
 
 st.write('初めての方は右のリンクから「Sign up」をしてAPIキーを取得してください',
@@ -44,5 +44,5 @@ if submitted:
 
     st.write("返答:", response['choices'][0]['text'])
 
-st.write('ご意見・ご要望は→', 'https://forms.gle/ADcoMh1zQUnoZVub7', 'まで')
+st.write('差し支えなければアンケートへのご協力をお願いします。→', 'https://forms.gle/ADcoMh1zQUnoZVub7', 'まで')
 st.write('© 2022-2023 Daiki Ito. All Rights Reserved.')
