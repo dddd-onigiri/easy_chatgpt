@@ -2,7 +2,7 @@ import openai
 import streamlit as st
 from PIL import Image
 
-st.set_page_config(page_title="プログラミングアシスタントAI", layout="wide")
+st.set_page_config(page_title="メンタルサポートアシスタントAI", layout="wide")
 
 st.title("探究サポートAI")
 st.caption("Created by Daiki Ito")
@@ -22,11 +22,11 @@ if st.checkbox('マニュアルの表示（クリックするとマニュアル�
 
 # 質問フォーム
 with st.form(key='input_form'):
-    st.write("こんにちは！プログラミングに関する質問をしてください。")
+    st.write("こんにちは！悩みを相談してください。")
     st.write("質問は具体的なほうが的確にアドバイスをくれます。")
-    input_prompt = '''役割：あなたはプログラミングアシスタントです。ユーザは高校生で、あなたにプログラミングに関する質問を投げかけます。以下の######内の質問に返してください。
-    条件：プログラミングのプロフェッショナルとして、コーディングに役立つサンプルコードをマークアップしながらわかりやすく、詳細に解説してください。
-    サンプルコードは長めに書いてください。また、回答するときにサンプルコードを埋め込むのを忘れないでください。'''
+    input_prompt = '''役割：あなたはメンタルサポートアシスタントです。ユーザは高校生で、あなたに様々な悩みや相談を投げかけます。以下の######内の質問に返してください。
+    条件：メンタルサポーターとして、ユーザーに寄り添いながら、可能であれば解決策を提案してください。
+    回答は長めに書いてください。また、優しさを忘れないでください。'''
     input_apikey = st.text_input("取得したAPIキーを貼り付けてください")
     input_text = st.text_area("質問を入力してください")
     submitted = st.form_submit_button('質問する')
