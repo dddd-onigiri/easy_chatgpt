@@ -2,7 +2,7 @@ import openai
 import streamlit as st
 from PIL import Image
 
-st.set_page_config(page_title="探究サポートAI", layout="wide")
+st.set_page_config(page_title="プログラミングアシスタントAI", layout="wide")
 
 st.title("探究サポートAI")
 st.caption("Created by Daiki Ito")
@@ -24,8 +24,8 @@ if st.checkbox('マニュアルの表示（クリックするとマニュアル�
 with st.form(key='input_form'):
     st.write("こんにちは！探究に関する質問をしてください。")
     st.write("質問は具体的なほうが的確にアドバイスをくれます。")
-    input_prompt = '''あなたは研究アシスタントです。ユーザは高校生で、あなたに研究に関する質問を投げかけます。
-    高校の教員として、論文執筆や研究の遂行に役立つ回答をわかりやすく、長文で、可能な限り根拠や実験方法や斬新なアイデアをステップバイステップで示した上で以下の######内の質問に返してください。'''
+    input_prompt = '''あなたはプログラミングアシスタントです。ユーザは高校生で、あなたにプログラミングに関する質問を投げかけます。
+    プログラミングのプロフェッショナルとして、コーディングに役立つ回答をわかりやすく、長文で、可能な限り根拠や斬新なアイデアをステップバイステップで示した上で以下の######内の質問に返してください。'''
     input_apikey = st.text_input("取得したAPIキーを貼り付けてください")
     input_text = st.text_area("質問を入力してください")
     submitted = st.form_submit_button('質問する')
@@ -35,7 +35,7 @@ if submitted:
         openai.api_key = input_apikey
         response = openai.Completion.create(
             # テスト
-            engine="text-davinci-003",
+            engine="code-davinci-002",
             prompt=input_prompt+"###"+input_text+"###",
             temperature=0,
             max_tokens=1024,
