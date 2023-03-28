@@ -36,7 +36,8 @@ if submitted:
         response = openai.Completion.create(
             # テスト
             engine="code-davinci-002",
-            prompt=input_prompt+"###"+input_text+"###",
+            prompt=input_text,
+            # prompt=input_prompt+"###"+input_text+"###",
             temperature=0,
             max_tokens=1024,
             top_p=1.0,
