@@ -25,7 +25,7 @@ with st.form(key='input_form'):
     st.write("こんにちは！プログラミングに関する質問をしてください。")
     st.write("質問は具体的なほうが的確にアドバイスをくれます。")
     input_prompt = '''役割：あなたはプログラミングアシスタントです。ユーザは高校生で、あなたにプログラミングに関する質問を投げかけます。以下の######内の質問に返してください。
-    条件：プログラミングのプロフェッショナルとして、コーディングに役立つサンプルコードをマークアップしながらわかりやすく解説してください。
+    条件：プログラミングのプロフェッショナルとして、コーディングに役立つサンプルコードをマークアップしながらわかりやすく、詳細に解説してください。
     サンプルコードは長めに書いてください。また、回答するときにサンプルコードを埋め込むのを忘れないでください。'''
     input_apikey = st.text_input("取得したAPIキーを貼り付けてください")
     input_text = st.text_area("質問を入力してください")
@@ -39,7 +39,7 @@ if submitted:
             engine="text-davinci-003",
             prompt=input_prompt+"###"+input_text+"###",
             temperature=0.2,
-            max_tokens=1024,
+            max_tokens=2048,
             top_p=1.0,
             frequency_penalty=0,
             presence_penalty=0
