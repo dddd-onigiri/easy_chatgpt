@@ -36,8 +36,7 @@ if submitted:
         response = openai.Completion.create(
             # テスト
             engine="code-davinci-002",
-            prompt=input_text,
-            # prompt=input_prompt+"###"+input_text+"###",
+            prompt=input_prompt+"###"+input_text+"###",
             temperature=0,
             max_tokens=1024,
             top_p=1.0,
@@ -45,7 +44,7 @@ if submitted:
             presence_penalty=0
         )
 
-    st.write("返答:", response['choices'][0]['text'])
+    st.write("返答:", response['choices'][0]['code'])
 
 st.write('ご意見・ご要望は→', 'https://forms.gle/ADcoMh1zQUnoZVub7', 'まで')
 st.write('© 2022-2023 Daiki Ito. All Rights Reserved.')
