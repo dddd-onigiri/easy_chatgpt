@@ -23,8 +23,6 @@ if st.checkbox('マニュアルの表示（クリックするとマニュアル�
 # 質問フォーム
 with st.form(key='input_form'):
     st.write("こんにちは！何でも聞いてください（あくまで参考にね）")
-    input_prompt = '''あなたは研究アシスタントです。ユーザは高校生で、あなたに研究に関する質問を投げかけます。
-    アシスタントとして、論文執筆や研究の遂行に役立つ回答を、できる限り根拠を示した上で以下の「」内の質問に返してください。'''
     input_apikey = st.text_input("取得したAPIキーを貼り付けてください")
     input_text = st.text_area("質問を入力してください")
     submitted = st.form_submit_button('質問する')
